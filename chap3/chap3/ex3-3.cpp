@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+//P.110 ex 3-3 2개의 생성자를 가진 Circle 클래스
+
+class Circle {
+public:
+	int radius;
+	Circle();
+	Circle(int r);
+	double getArea();
+};
+
+Circle::Circle() {
+	radius = 1;
+	cout << "반지름 " << radius << "인 원 생성" << endl;
+}
+
+Circle::Circle(int r) {
+	radius = r;
+	cout << "반지름 " << radius << "인 원 생성" << endl;
+}
+
+double Circle::getArea() {
+	return 3.14 * radius * radius;
+}
+
+int main() {
+	Circle donut;
+	double area = donut.getArea();
+	cout << "donut 면적은 " << area << endl;
+
+	Circle pizza(30);
+	area = pizza.getArea();
+	cout << "pizza 면적은 " << area << endl;
+}
