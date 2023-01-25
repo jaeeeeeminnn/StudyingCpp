@@ -17,4 +17,5 @@ int main() {
 	}
 
 	cout << "끝입니다." << endl;
+	cout << "test cout" << endl;
 }
