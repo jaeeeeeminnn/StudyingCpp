@@ -15,4 +15,6 @@ int main() {
 		s = sub + first;
 		cout << s << endl;
 	}
+
+	cout << "끝입니다." << endl;
 }
