@@ -15,7 +15,6 @@ public:
 
 void Histogram::print() {
 	string result = "";
-	string lowerResult = "";
 	int count = 0;
 	int alphacount = 0;
 	int alpha[26];
@@ -23,20 +22,16 @@ void Histogram::print() {
 	
 	for (int i = 0;i < s.length();i++) {
 		if (isalpha(s[i])) {
-			result += s[i];
+			result += tolower(s[i]);
 			count++;
 		}
-	}
-
-	for (int i = 0;i < result.length();i++) {
-		lowerResult += tolower(result[i]);
 	}
 	char a = 'a';
 	int index = 0;
 
 	while (a <= 'z') {
-		for (int i = 0;i < lowerResult.length();i++) {
-			if (lowerResult[i] == a) {
+		for (int i = 0;i < result.length();i++) {
+			if (result[i] == a) {
 				alphacount++;
 			}
 		}
@@ -46,6 +41,8 @@ void Histogram::print() {
 		alphacount = 0;
 	}
 	
+	cout << result << endl << endl;
+
 
 	cout << "ÃÑ ¾ËÆÄºª ¼ö´Â " << count << "°³ÀÔ´Ï´Ù." << endl;
 
