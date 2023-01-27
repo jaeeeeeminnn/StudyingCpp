@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//P.239 chap5 ex 5-6 참조에 의한 호출로 Circle 객체의 참조 전달
+//P.239 chap5 ex 5-7 참조 매개 변수를 가진 함수 만들기 연습
 
 class Circle {
 	int radius;
